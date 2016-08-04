@@ -20,10 +20,10 @@
     
         <span class="auto-style2">Exemplo Copiar Colar</span><br class="auto-style2" />
         <br class="auto-style2" />
-        <span class="auto-style2">Valor 1: </span>
+        <span class="auto-style2"><strong>Valor</strong> 1: </span>
         <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style2"></asp:TextBox>
         <br class="auto-style2" />
-        <span class="auto-style2">Valor 2:&nbsp; </span>
+        <span class="auto-style2"><strong>Valor</strong> 2:&nbsp; </span>
         <asp:TextBox ID="TextBox2" runat="server" CssClass="auto-style2"></asp:TextBox>
         <br class="auto-style2" />
         <br class="auto-style2" />
