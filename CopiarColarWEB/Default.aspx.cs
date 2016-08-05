@@ -18,7 +18,8 @@ public partial class _Default : System.Web.UI.Page
     {
         // var1 = TextBox1.Text;
         //Session["var1"] = TextBox1.Text; 
-        Cache["var1"] = TextBox1.Text;
+        //Cache["var1"] = TextBox1.Text;
+        ViewState["var1"] = TextBox1.Text; 
         TextBox1.Text = ""; 
     }
 
@@ -26,6 +27,7 @@ public partial class _Default : System.Web.UI.Page
     {
         //TextBox2.Text = var1; 
         //TextBox2.Text = Session["var1"].ToString(); 
-        TextBox2.Text = Cache["var1"].ToString(); 
+        // TextBox2.Text = Cache["var1"].ToString(); 
+        TextBox2.Text = ViewState["var1"].ToString(); 
     }
 }
