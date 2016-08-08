@@ -21,11 +21,16 @@
         <span class="auto-style2">Exemplo Copiar Colar</span><br class="auto-style2" />
         <br class="auto-style2" />
         <span class="auto-style2"><strong>Valor</strong> 1: </span>
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style2"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style2" MaxLength="35" Width="487px"></asp:TextBox>
         <br class="auto-style2" />
         <span class="auto-style2"><strong>Valor</strong> 2:&nbsp; </span>
         <asp:TextBox ID="TextBox2" runat="server" CssClass="auto-style2"></asp:TextBox>
         <br class="auto-style2" />
+        <br />
+        <span class="auto-style2">Total de Acessos:
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </span>
+        <br />
         <br class="auto-style2" />
         <asp:Button ID="btnCopiar" runat="server" CssClass="auto-style2" OnClick="btnCopiar_Click" Text="Copiar" />
         <span class="auto-style2">&nbsp;&nbsp; </span>
