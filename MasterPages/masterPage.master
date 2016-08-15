@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masterPage.master.cs" Inherits="masterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 1240px;
+        }
+        .auto-style6 {
+            height: 628px;
+            vertical-align: top;
+        }
+        .auto-style9 {
+            height: 120px;
+        }
+        .auto-style12 {
+            height: 70px;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .auto-style13 {
+            height: 628px;
+            width: 234px;
+            vertical-align:top; 
+        }
+        .auto-style14 {
+            height: 628px;
+            width: 1100px;
+            vertical-align: top;
+        }
+        .auto-style15 {
+            font-size: medium;
+            text-align: center;
+        }
+        .auto-style16 {
+            height: 350px;
+            width: 234px;
+        }
+        .auto-style18 {
+            width: 220px;
+            height: 164px;
+        }
+        .auto-style19 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="height: 1246px; width: 1570px">
+    <form id="form1" runat="server">
+    <div>
+        <table cellpadding="0" cellspacing="0" class="auto-style1">
+            <tr>
+                <td class="auto-style12" colspan="2" style="background-color: #FFFFCC"><strong>Sistema Exemplo Master Pages e Menus</strong></td>
+                <td class="auto-style9" rowspan="2">
+                    <img alt="" class="auto-style18" src="logoOpenSource.jpg" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style12" colspan="2" style="background-color: #FFFFCC">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style13" style="background-color: #CCFFFF">&nbsp;</td>
+                <td class="auto-style14" rowspan="2">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style6" rowspan="2" style="background-color: #66FFFF"></td>
+            </tr>
+            <tr>
+                <td class="auto-style16" style="background-color: #CCFFFF"></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-color: #FFCC99" class="auto-style19"></td>
+            </tr>
+            <tr>
+                <td class="auto-style15" colspan="3" style="background-color: #FFCC99"><strong>Desenvolvido por&nbsp; Camolesi 2016 at FEMA&nbsp; </strong></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
