@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+        <siteMapNode url="HOME.ASPX" title="HOME"  description="" />
+        <siteMapNode title="Notebooks">
+            <siteMapNode url="ACER.aspx" title="ACER"/>
+            <siteMapNode url="DELL.ASPX" title="DELL"/>
+            <siteMapNode url="HP.ASPX" title="HP"/>
+        </siteMapNode>
+        <siteMapNode title="Celular" >
+            <siteMapNode url="APPLE.ASPX" title="APPE"/>
+            <siteMapNode url="MOTOROLA.ASPX" title="MOTOROLA"/>
+            <siteMapNode url="SAMSUNG.ASPX" title="SAMSUNG"/>
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

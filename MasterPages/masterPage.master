@@ -10,11 +10,12 @@
     <style type="text/css">
         .auto-style1 {
             width: 100%;
-            height: 1240px;
+            height: 983px;
         }
         .auto-style6 {
             height: 628px;
             vertical-align: top;
+            text-align: left;
         }
         .auto-style9 {
             height: 120px;
@@ -26,7 +27,7 @@
         }
         .auto-style13 {
             height: 628px;
-            width: 234px;
+            width: 208px;
             vertical-align:top; 
         }
         .auto-style14 {
@@ -39,8 +40,7 @@
             text-align: center;
         }
         .auto-style16 {
-            height: 350px;
-            width: 234px;
+            width: 208px;
         }
         .auto-style18 {
             width: 220px;
@@ -48,10 +48,17 @@
         }
         .auto-style19 {
             text-align: center;
+            font-size: x-large;
+        }
+        .auto-style20 {
+            font-size: xx-large;
+        }
+        .auto-style21 {
+            font-size: large;
         }
     </style>
 </head>
-<body style="height: 1246px; width: 1570px">
+<body style="height: 1003px; width: 1570px">
     <form id="form1" runat="server">
     <div>
         <table cellpadding="0" cellspacing="0" class="auto-style1">
@@ -61,25 +68,50 @@
                     <img alt="" class="auto-style18" src="logoOpenSource.jpg" /></td>
             </tr>
             <tr>
-                <td class="auto-style12" colspan="2" style="background-color: #FFFFCC">&nbsp;</td>
+                <td class="auto-style12" colspan="2" style="background-color: #FFFFCC">
+                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal">
+                    </asp:Menu>
+                </td>
             </tr>
             <tr>
-                <td class="auto-style13" style="background-color: #CCFFFF">&nbsp;</td>
+                <td class="auto-style13" style="background-color: #CCFFFF">
+                    <asp:Menu ID="Menu2" runat="server" BackColor="#FFFBD6" CssClass="auto-style20" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                    </asp:Menu>
+                </td>
                 <td class="auto-style14" rowspan="2">
                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
                     </asp:ContentPlaceHolder>
                 </td>
-                <td class="auto-style6" rowspan="2" style="background-color: #66FFFF"></td>
+                <td class="auto-style6" rowspan="2" style="background-color: #66FFFF">
+                    <asp:TreeView ID="TreeView1" runat="server" CssClass="auto-style20" DataSourceID="SiteMapDataSource1" Height="463px" ImageSet="XPFileExplorer" NodeIndent="15" Width="272px">
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />
+                        <NodeStyle Font-Names="Tahoma" Font-Size="8pt" ForeColor="Black" HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="2px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style16" style="background-color: #CCFFFF"></td>
             </tr>
             <tr>
-                <td colspan="3" style="background-color: #FFCC99" class="auto-style19"></td>
+                <td colspan="3" style="background-color: #FFCC99" class="auto-style19">Você está em
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="auto-style21">
+                    </asp:SiteMapPath>
+                </td>
             </tr>
             <tr>
-                <td class="auto-style15" colspan="3" style="background-color: #FFCC99"><strong>Desenvolvido por&nbsp; Camolesi 2016 at FEMA&nbsp; </strong></td>
+                <td class="auto-style15" colspan="3" style="background-color: #FFCC99">
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                    <strong>Desenvolvido por&nbsp; Camolesi 2016 at FEMA&nbsp; </strong></td>
             </tr>
         </table>
     </div>
