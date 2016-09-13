@@ -21,20 +21,33 @@
         }
         .auto-style6 {
             width: 434px;
-            font-size: xx-large;
+            text-align: center;
         }
         .auto-style7 {
             width: 355px;
+            text-align: center;
         }
         .auto-style8 {
             width: 231px;
+            text-align: center;
         }
         .auto-style9 {
             width: 214px;
+            text-align: center;
         }
-        .auto-style10 {
-            width: 86px;
-            font-size: xx-large;
+        .auto-style13 {
+            font-size: x-large;
+        }
+        .auto-style14 {
+            width: 424px;
+            text-align: center;
+        }
+        .auto-style15 {
+            font-size: large;
+        }
+        .auto-style16 {
+            font-size: x-large;
+            margin-top: 0px;
         }
     </style>
 </head>
@@ -46,8 +59,18 @@
         </em></strong>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="689px">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Width="892px" AllowPaging="True" AutoGenerateColumns="False" CssClass="auto-style16" OnPageIndexChanged="GridView1_PageIndexChanged" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCommand="GridView1_RowCommand" PageSize="5">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="ID" />
+                <asp:BoundField DataField="titulo" HeaderText="Título" />
+                <asp:BoundField DataField="genero" HeaderText="Gênero" />
+                <asp:BoundField DataField="quantidade" HeaderText="Quantidade">
+                <ItemStyle HorizontalAlign="Center" />
+                </asp:BoundField>
+                <asp:BoundField DataField="valor" DataFormatString="{0:C2}" HeaderText="Valor" />
+                <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Selecionar" />
+            </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -63,50 +86,55 @@
         <br />
         <table class="auto-style2">
             <tr>
-                <td class="auto-style10" colspan="2">ID</td>
-                <td class="auto-style4" colspan="2">
-                    <asp:TextBox ID="txtId" runat="server" CssClass="auto-style1"></asp:TextBox>
+                <td class="auto-style5" colspan="2">ID</td>
+                <td class="auto-style4" colspan="3">
+                    <asp:TextBox ID="txtId" runat="server" CssClass="auto-style13"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style10" colspan="2">Descrição: </td>
-                <td class="auto-style4" colspan="2">
-                    <asp:TextBox ID="txtDesc" runat="server" CssClass="auto-style1"></asp:TextBox>
+                <td class="auto-style5" colspan="2">Descrição: </td>
+                <td class="auto-style4" colspan="3">
+                    <asp:TextBox ID="txtDesc" runat="server" CssClass="auto-style13"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style10" colspan="2">GÊnero: </td>
-                <td class="auto-style4" colspan="2">
-                    <asp:TextBox ID="txtGen" runat="server" CssClass="auto-style1"></asp:TextBox>
+                <td class="auto-style5" colspan="2">GÊnero: </td>
+                <td class="auto-style4" colspan="3">
+                    <asp:TextBox ID="txtGenero" runat="server" CssClass="auto-style13"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style10" colspan="2">Quantidade: </td>
-                <td class="auto-style4" colspan="2">
-                    <asp:TextBox ID="txtQtde" runat="server" CssClass="auto-style1"></asp:TextBox>
+                <td class="auto-style5" colspan="2">Quantidade: </td>
+                <td class="auto-style4" colspan="3">
+                    <asp:TextBox ID="txtQtde" runat="server" CssClass="auto-style13"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style10" colspan="2">Valor: </td>
-                <td class="auto-style4" colspan="2">
-                    <asp:TextBox ID="txtValor" runat="server" CssClass="auto-style1"></asp:TextBox>
+                <td class="auto-style5" colspan="2">Valor: </td>
+                <td class="auto-style4" colspan="3">
+                    <asp:TextBox ID="txtValor" runat="server" CssClass="auto-style13"></asp:TextBox>
                 </td>
             </tr>
             <tr class="auto-style1">
                 <td class="auto-style5" colspan="2">&nbsp;</td>
-                <td class="auto-style4" colspan="2">&nbsp;</td>
+                <td class="auto-style4" colspan="3">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style9">
-                    <asp:Button ID="btnInserir" runat="server" CssClass="auto-style1" OnClick="btnInserir_Click" Text="Inserir" />
+                    <asp:Button ID="btnInserir" runat="server" CssClass="auto-style15" OnClick="btnInserir_Click" Text="Inserir" />
                 </td>
                 <td class="auto-style8">
-                    <asp:Button ID="Button2" runat="server" CssClass="auto-style1" Text="Button" />
+                    <asp:Button ID="btnEditar" runat="server" CssClass="auto-style15" Text="Editar" OnClick="btnEditar_Click" />
                 </td>
                 <td class="auto-style7">
-                    <asp:Button ID="Button3" runat="server" CssClass="auto-style1" Text="Button" />
+                    <asp:Button ID="btnRemover" runat="server" CssClass="auto-style15" Text="Remover" OnClick="btnRemover_Click" />
                 </td>
-                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style6">
+                    <asp:Button ID="btnGravar" runat="server" CssClass="auto-style15" OnClick="btnGravar_Click" Text="Gravar" />
+                </td>
+                <td class="auto-style14">
+                    <asp:Button ID="btnCancelar" runat="server" CssClass="auto-style15" OnClick="btnCancelar_Click" style="height: 40px" Text="Cancelar" />
+                </td>
             </tr>
         </table>
         <br />
